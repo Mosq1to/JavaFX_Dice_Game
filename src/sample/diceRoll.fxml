@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="687.0" prefWidth="232.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DiceRoll">
+<AnchorPane prefHeight="688.0" prefWidth="329.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DiceRoll">
    <children>
-      <Button fx:id="goBackbtn" layoutX="119.0" layoutY="607.0" mnemonicParsing="false" onAction="#goBack" prefHeight="49.0" prefWidth="98.0" text="Back">
+      <Button fx:id="goBackbtn" layoutX="217.0" layoutY="610.0" mnemonicParsing="false" onAction="#goBack" prefHeight="49.0" prefWidth="98.0" text="Back">
          <font>
             <Font size="28.0" />
          </font></Button>
@@ -17,16 +17,16 @@
             <Font size="30.0" />
          </font>
       </Button>
-      <Label layoutX="49.0" layoutY="508.0" prefHeight="38.0" prefWidth="129.0" text="Winner:" />
-      <Label fx:id="winner" layoutX="40.0" layoutY="546.0" prefHeight="52.0" prefWidth="151.0" text="Winner:">
+      <Label layoutX="132.0" layoutY="508.0" prefHeight="38.0" prefWidth="65.0" text="Winner:" />
+      <Label fx:id="winner" layoutX="33.0" layoutY="546.0" prefHeight="52.0" prefWidth="263.0">
          <font>
             <Font size="34.0" />
          </font>
       </Label>
-      <ImageView fx:id="playerOneScore" fitHeight="66.0" fitWidth="65.0" layoutX="80.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="playerTwoScore" fitHeight="66.0" fitWidth="65.0" layoutX="80.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="playerThreeScore" fitHeight="66.0" fitWidth="65.0" layoutX="81.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="playerFourScore" fitHeight="66.0" fitWidth="65.0" layoutX="81.0" layoutY="344.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="playerFiveScore" fitHeight="66.0" fitWidth="65.0" layoutX="80.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="playerOneScore" fitHeight="66.0" fitWidth="65.0" layoutX="132.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="playerTwoScore" fitHeight="66.0" fitWidth="65.0" layoutX="132.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="playerThreeScore" fitHeight="66.0" fitWidth="65.0" layoutX="132.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="playerFourScore" fitHeight="66.0" fitWidth="65.0" layoutX="132.0" layoutY="344.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="playerFiveScore" fitHeight="66.0" fitWidth="65.0" layoutX="132.0" layoutY="442.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

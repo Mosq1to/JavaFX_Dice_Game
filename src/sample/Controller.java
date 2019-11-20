@@ -30,14 +30,8 @@ public class Controller {
 
     @FXML
     void startgame(ActionEvent event) throws IOException {
-        int spelare = Integer.valueOf(players.getValue().toString());
-        System.out.println(spelare);
         Parent diceRollParent = FXMLLoader.load(getClass().getResource("diceRoll.fxml"));
         Scene diceRollScene = new Scene(diceRollParent);
-
-        DiceRoll gamers = new DiceRoll();
-        gamers.setPlayers(spelare);
-
 
         //Get current Stage info
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -45,12 +39,6 @@ public class Controller {
         window.setScene(diceRollScene);
 
 
-    }
-
-    @FXML
-    void initialize() {
-        players.setValue("2");
-        players.getItems().addAll("2","3","4","5");
     }
 
     }

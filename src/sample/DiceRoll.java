@@ -28,6 +28,9 @@ public class DiceRoll implements Initializable {
     private Button rollBtn;
 
     @FXML
+    private Label winner;
+
+    @FXML
     private ImageView playerOneScore;
 
     @FXML
@@ -62,7 +65,6 @@ public class DiceRoll implements Initializable {
 
             d1.rolldie();
             roll[i] = d1.getValue();
-            System.out.println(roll[i]);
             Image temp = new Image("sample/Dice_Six.jpg");
             temp = setScorePictures(roll[i]);
 
@@ -86,12 +88,14 @@ public class DiceRoll implements Initializable {
             }
 
         }
+        int win = findWinner(roll);
+        setWinner(win);
+        System.out.println(win);
 
     }
 
     public void setPlayers(int players){
         this.players = players;
-        System.out.println(players);
     }
 
     /**
@@ -139,7 +143,47 @@ public class DiceRoll implements Initializable {
 
     public int findWinner(int[] roll){
 
-        
+        int biggestValue = 0;
+        int arrayIndex =0;
+        for(int i=1;i<6;i++){
+            if (roll[i]==biggestValue){
+                return 6;
+            }
+
+            if(roll[i]>biggestValue){
+                biggestValue = roll[i];
+                arrayIndex = i;
+            }
+
+        }
+
+
+        return arrayIndex;
+    }
+
+    public void setWinner (int i){
+
+        switch (i){
+
+            case 1:
+                winner.setText("Player 1 Won");
+                break;
+            case 2:
+                winner.setText("Player 2 Won");
+                break;
+            case 3:
+                winner.setText("Player 3 Won");
+                break;
+            case 4:
+                winner.setText("Player 4 Won");
+                break;
+            case 5:
+                winner.setText("Player 5 Won");
+                break;
+            case 6:
+                winner.setText("Tie");
+                break;
+        }
 
     }
 
