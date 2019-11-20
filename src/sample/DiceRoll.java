@@ -1,9 +1,12 @@
+/**
+ * Controller class for fxml file second scene
+ */
+
 package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,13 +15,11 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-
-import java.io.File;
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
-public class DiceRoll implements Initializable {
+
+
+public class DiceRoll {
 
     private int players;
     @FXML
@@ -45,6 +46,11 @@ public class DiceRoll implements Initializable {
     @FXML
     private ImageView playerFiveScore;
 
+
+    /**
+     * Method will be preformed when back button is pressed
+     * @param event
+     */
     @FXML
     void goBack(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
@@ -57,6 +63,10 @@ public class DiceRoll implements Initializable {
 
     }
 
+    /**
+     * Method will be preformed when roll button is pressed
+     * @param event
+     */
     @FXML
     void roll(ActionEvent event) {
         Dice d1 = new Dice();
@@ -94,19 +104,11 @@ public class DiceRoll implements Initializable {
 
     }
 
-    public void setPlayers(int players){
-        this.players = players;
-    }
-
     /**
-     * Will act ass a constructor for second scene
-     * @param url
-     * @param resourceBundle
+     * method to set picture according to score
+     * @param score
+     * @return
      */
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
 
     public Image setScorePictures(int score){
 
@@ -141,6 +143,11 @@ public class DiceRoll implements Initializable {
         return dieImage;
     }
 
+    /**
+     * Method to find the highest number in array
+     * @param roll
+     * @return
+     */
     public int findWinner(int[] roll){
 
         int biggestValue = 0;
@@ -161,6 +168,10 @@ public class DiceRoll implements Initializable {
         return arrayIndex;
     }
 
+    /**
+     * Set Winner Label
+     * @param i
+     */
     public void setWinner (int i){
 
         switch (i){

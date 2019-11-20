@@ -1,3 +1,10 @@
+/**
+ *
+ * This program is done to run a simple JavaFX dice program with 5 player.
+ * the program will roll a dice for each player and the  calculate and present the winner.
+ * if there is a tie the program will show that its a tie
+ *
+ */
 package sample;
 
 import javafx.application.Application;
@@ -7,10 +14,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-
-    Stage window;
-    Stage Start;
-    Stage Roll;
 
     @Override
     public void start(Stage primaryStage) throws Exception{

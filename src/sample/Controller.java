@@ -7,9 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class Controller {
@@ -18,16 +16,22 @@ public class Controller {
     private Button exitBtn;
     @FXML
     private Button startBtn;
-    @FXML
-    private ComboBox players;
 
 
+    /**
+     * Method will be preformed when exit button is pressed
+     * @param event
+     */
     @FXML
     void exit(ActionEvent event) {
         System.exit(0);
     }
 
-
+    /**
+     * Method will be preformed when start button is pressed
+     * @param event
+     * @throws IOException
+     */
     @FXML
     void startgame(ActionEvent event) throws IOException {
         Parent diceRollParent = FXMLLoader.load(getClass().getResource("diceRoll.fxml"));
