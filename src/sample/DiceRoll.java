@@ -57,13 +57,14 @@ public class DiceRoll implements Initializable {
     @FXML
     void roll(ActionEvent event) {
         Dice d1 = new Dice();
+        int [] roll = new int[6];
         for(int i=1;i<6;i++){
 
             d1.rolldie();
-            int d1Roll = d1.getValue();
-            System.out.println(d1Roll);
+            roll[i] = d1.getValue();
+            System.out.println(roll[i]);
             Image temp = new Image("sample/Dice_Six.jpg");
-            temp = setScorePictures(d1Roll);
+            temp = setScorePictures(roll[i]);
 
 
             switch (i){
@@ -134,6 +135,12 @@ public class DiceRoll implements Initializable {
                 return imgSix;
         }
         return dieImage;
+    }
+
+    public int findWinner(int[] roll){
+
+        
+
     }
 
 
