@@ -153,17 +153,21 @@ public class DiceRoll {
         int biggestValue = 0;
         int arrayIndex =0;
         for(int i=1;i<6;i++){
-            if (roll[i]==biggestValue){
-                return 6;
-            }
 
             if(roll[i]>biggestValue){
                 biggestValue = roll[i];
                 arrayIndex = i;
             }
-
         }
 
+        for(int i= 1;i<6;i++){
+            System.out.println(arrayIndex);
+            System.out.println(biggestValue);
+            if (roll[i]==biggestValue && i != arrayIndex){
+                    return 6;
+            }
+
+        }
 
         return arrayIndex;
     }
