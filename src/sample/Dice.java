@@ -1,10 +1,10 @@
 package sample;
 
 public class Dice {
-    private static final int diceMAX = 6;
+    private static final int diceMAX = 7;
     private static final int diceMin = 1;
     private int value;
-    public void Dice () {
+    public void dice () {
 
     }
 
